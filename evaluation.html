@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Arapey|Cabin+Condensed|Josefin+Sans|Lato|Montserrat|Playfair+Display" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<title>Integration Counselling</title>
+<style>
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  font-family: helvetica, sans-serif;
+  background: white;
+}
+#nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #454545;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+#nav li {
+  color: #aaaaaa;
+  font-family: 'Lato';
+  font-size: 20px;
+  padding-top: 5px;
+}
+#nav li a {
+  color: #aaaaaa;
+  transition: color .5s;
+  -webkit-transition: color .5s;
+  -moz-transition: color .5s;
+}
+  #mobilenav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background: #454545;
+      height: 40px;
+      display: flex;
+      justify-content: space-around;
+  }
+  #mobilenav li {
+    color: #aaaaaa;
+    font-family: 'Lato';
+    font-size: 20px;
+    padding-top: 5px;
+  }
+  #mobilenav li a {
+    color: #aaaaaa;
+    transition: color .5s;
+    -webkit-transition: color .5s;
+    -moz-transition: color .5s;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: inherit;
+  color: #aaaaaa;
+  padding: inherit;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+a:hover {
+  text-decoration: none;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+    width: 100%;
+}
+h1 {
+  font-family: 'Playfair Display', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin-top: 0px;
+  padding-top: 50px;
+  transition: color 1s;
+  -webkit-transition: color 1s;
+  -moz-transition: color 1s;
+}
+h2 {
+  font-family: 'Montserrat';
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0;
+  transition: color 1s;
+  -webkit-transition: color 1s;
+  -moz-transition: color 1s;
+}
+.pagehead {
+  margin: 0;
+  height: 340px;
+  width: 100%;
+  background-image: url("pagehead.jpeg");
+  background-position: top;
+}
+p {
+  font-family: 'Josefin Sans';
+  padding: 30px 50px 30px 50px;
+  line-height: 30px;
+  font-size: 16px;
+}
+h3 {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 30px;
+  padding: 60px 60px 15px 60px;
+}
+#firstp {
+    padding: 50px 50px 25px 50px;
+    line-height: 20px;
+}
+#bacp {
+  margin: 40px;
+  height: 200px;
+}
+#therapists, #therapiststwo, #therapiststhree, #therapistsfour, #group, #grouptwo, #groupthree, #locations, #locationstwo {
+  background-color: #ebebe0;
+}
+
+#diagram {
+  padding: 10px 0px 20px 50px;
+  height: 400px;
+  align-content: center;
+
+}
+#headshot {
+  height: 300px;
+  border-radius: 50px;
+  margin: 20px 0px 50px 50px;
+}
+#qualtext {
+  font-size: 16px;
+  padding: 20px 20px 50px 80px;
+  font-family: 'Montserrat';
+}
+.edlogo {
+  width: 150px;
+  margin: 5px;
+  align: right;
+}
+#edlogos {
+  padding: 60px 20px 50px 100px;
+  align: right;
+}
+table {
+  width: 90%;
+  font-size: 18px;
+  font-family: 'Montserrat';
+  align-items: left;
+  margin: 0px 20px 50px 80px;
+}
+table tr td {
+    padding: 20px;
+}
+#topics {
+  margin: 50px 20px 50px 80px;
+}
+#topics td {
+  font-family: 'Cabin Condensed';
+  font-size: 22px;
+}
+.feestext {
+  font-size: 16px;
+  font-family: 'Montserrat';
+  margin: 0px;
+  padding: 0px 20px 50px 20px;
+}
+#groupimg {
+  width: 450px;
+  padding: 20px 20px 50px 50px;
+}
+#feesimg {
+  width: 400px;
+  align: center;
+  margin: 0px 20px 20px 20px;
+}
+.map {
+  margin: 30px 50px 50px 50px;
+}
+.address {
+  padding: 80px 20px 50px 50px;
+  font-size: 18px;
+  height: 400px;
+}
+#locinfo {
+  padding: 20px 20px 20px 50px;
+  font-size: 18px;
+}
+.container {
+  width: 100%;
+}
+.profprof {
+  width: 200px;
+  margin: 10px 10px 30px 40px;
+  align: center;
+  border: 10px;
+  padding-left: 50px;
+}
+.contact {
+  font-size: 16px;
+  margin: 0;
+  padding: 10px 20px 10px 50px;
+}
+.foottext {
+  color: #848f9b;
+  font-size: 12px;
+  text-align: right;
+  margin: 5px;
+  font-family: 'Montserrat';
+}
+#footname {
+  color: #848f9b;
+  font-size: 12px;
+  text-align: left;
+  margin: 5px 5px 0px 5px;
+  padding-bottom: 20px;
+  font-family: 'Montserrat';
+}
+
+.logo {
+  height: 95px;
+  margin: 0px 0px 10px 85px;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+@media (max-width: 822px) {
+  h1 {
+   font-size: 50px;
+   margin: 20px 0 0 0;
+   line-height: 40px;
+  }
+  h2 {
+   font-size: 20px;
+   margin: 20px 0 30px 0;
+  }
+  #nav li {
+    font-size: 16px;
+  }
+  #nav {
+    display: inline-flex;
+  }
+}
+@media (max-width: 598px) {
+  #nav {
+    height: 60px;
+  }
+}
+@media (max-width: 700px) {
+  #nav{
+    display: none;
+  }
+}
+@media (min-width: 700px) {
+    #mobilenav {
+      display: none;
+    }
+  }
+}
+</style>
+</head>
+<body>
+  <div id="wrapper">
+  <div class="pagehead">
+    <h1>Integration Counselling</h1>
+    <h2>counselling & psychotherapy service</h2>
+  </div>
+  <div class="nav" id="stickynav">
+    <nav>
+      <ul id="nav">
+        <li><a href="#therapists">Therapists</a></li>
+        <li><a href="#whatis">What is Integrative Counselling?</a></li>
+        <li><a href="#group">Group Facilitation</a></li>
+        <li><a href="#fees">Fees</a></li>
+        <li><a href="#locations">Locations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="dropdown" id="mobilenav">
+    <button class="dropbtn">Menu</button>
+  <div class="dropdown-content">
+    <a href="#therapists">Therapists</a>
+    <a href="#whatis">What is Integrative Counselling?</a>
+    <a href="#group">Group Facilitation</a>
+    <a href="#fees">Fees</a>
+    <a href="#locations">Locations</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+  <div class="container" id="content">
+    <form action="action_page.php">
+
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name.."></br>
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name.."></br>
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select></br>
+
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+      <input type="submit" value="Submit">
+
+    </form>
+  <div id="footer" class="row">
+    <hr>
+    <div class="col-xs-6">
+      <p id="footname"> 2019 Integration Counselling</p>
+      <a href="https://www.linkedin.com/company/integration-counselling/"><img class="logo" src="squarelog.png"/>
+    </div>
+    <div class="col-xs-6">
+      <p class= "foottext">https://integrationcounselling.co.uk</br><b>e:</b> integrationcounselling@outlook.com<br /><b>t:</b> 0751 050 6776</p>
+    </div>
+  </div>
+  </div>
+  <script>
+  $(document).ready(function(){
+  $('body').css('display', 'none');
+  $('body').fadeIn(1000);
+  });
+  $(function(){
+      var x = 0;
+      setInterval(function(){
+          x-=1;
+          $('.pagehead').css('background-position', x + 'px 0');
+      }, 100);
+  })
+  // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("stickynav");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop - 40;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+  $('h1').mouseover('hover', function() {
+    $('h1, h2').css("color", "#545454")
+  })
+  $('h1').mouseout('hover', function() {
+    $('h1, h2').css("color", "#aaaaaa")
+  })
+  $('li a').mouseover('hover', function() {
+    $(this).css("color", "#333333")
+  })
+  $('a').mouseout('hover', function() {
+    $(this).css("color", "#aaaaaa")
+  })
+  $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1200, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+$('.profprof').mouseenter(function() {
+    $(this).css("cursor","pointer");
+    $(this).animate({width: "40%", height: "40%"}, 'slow');
+});
+
+$('.profprof').mouseleave(function() {
+    $(this).animate({width: "200px"}, 'slow');
+});
+  </script>
+
+</body>
